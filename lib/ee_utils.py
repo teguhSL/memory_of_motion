@@ -13,6 +13,12 @@ from numpy.linalg import pinv
 import time
 from scipy.stats import multivariate_normal as mvn
 
+def toggle_key(key):
+    if key == 'left':
+        return 'right'
+    else:
+        return 'left'
+
 class GMM():
     def __init__(self, D = 1, K = 2,  reg_factor = 1e-6):
         self.D = D #number of dimensions
